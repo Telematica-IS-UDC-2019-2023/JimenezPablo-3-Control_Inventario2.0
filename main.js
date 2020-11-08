@@ -36,7 +36,7 @@ addProd.addEventListener('click', () => {
 
     } else {
         var aux = new Producto(codigo, nombre, descripcion, cantidad, costo);
-        producto.siguiente=aux
+        
         inventario.addProduct(producto,aux)
         producto=aux;
     }

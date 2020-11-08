@@ -1,6 +1,6 @@
 export default class Inventario {
 
-    cosntructor(){
+    constructor(){
         this.inicio = null;
     }
 
@@ -8,8 +8,11 @@ export default class Inventario {
         if(this.inicio == null){
             this.inicio = producto;
         } else {
-            producto.siguiente = productoNuevo
-            //productoNuevo.anterior = producto;
+            let aux  = this.inicio;
+            while(aux.siguiente != null){
+                aux= aux.siguiente;
+            }
+            aux.siguiente = productoNuevo;
         }
     }
 
